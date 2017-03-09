@@ -38,10 +38,15 @@ public class ToC1WashingMachine {
         
     }
     
-    public void setParams(WashingMachine wm){
+    public static void setParams(WashingMachine wm){
         switch(wm.fabricType){
             case 1:{
-                
+                   wm.waterTemp = 20;
+                   wm.machineRPM = 800;
+                   wm.stateTime[0] = 10;
+                   wm.stateTime[1] = 18;
+                   wm.stateTime[2] = 14;
+                   wm.stateTime[3] = 4;
             }
                 
             case 2: {
@@ -65,7 +70,9 @@ public class ToC1WashingMachine {
         int clothType;
         Scanner sc = new Scanner(System.in);
         clothType = sc.nextInt();
+        wm.fabricType = clothType;
         
+        setParams(wm);
         
         
     }
