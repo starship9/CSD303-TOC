@@ -14,7 +14,7 @@ public class Regex {
     private final int NO_OF_CHARS = 256;
     
     public void computeTransFun(String pat, int M, int TF[][]){
-        int i, lps = 0, x;
+        int i,j,k, lps = 0, x;
  
        // Fill entries in first row
          for (x =0; x < NO_OF_CHARS; x++)
@@ -23,15 +23,22 @@ public class Regex {
          TF[0][(int)(pat.charAt(0))] = 1;
  
        // Fill entries in other rows
-    for (i = 1; i<= M; i++)
+    for (i = 1; i< M; i++)
     {
         // Copy values from row at index lps
         for (x = 0; x < NO_OF_CHARS; x++)
             TF[i][x] = TF[lps][x];
  
         // Update the entry corresponding to this character
-             System.out.println((int)pat.charAt(i));
+             //System.out.println((int)pat.charAt(i));
         TF[i][(int)(pat.charAt(i))] = i + 1;
+        
+        for(j=0;j<M;j++){
+            for(k=0;k<256;k++){
+                System.out.println(k+"-->"+TF[j][k]);
+            }
+            //System.out.println("\n");
+        }
  
         // Update lps for next row to be filled
         if (i < M)
@@ -56,7 +63,7 @@ public void Search(String pat, String txt)
        j = TF[j][(int)(txt.charAt(i))];
        if (j == M)
        {
-           System.out.println("\n pattern found at index " + (i-M+1));
+           System.out.println("Accepted!");
        }
     }
 }
@@ -67,7 +74,7 @@ public void Search(String pat, String txt)
     public static void main(String[] args) {
         Regex rex = new Regex();
         String txt = "GEEKS FOR GEEKS";
-        String pat = "GEEKS";
+        String pat = "THERE";
         rex.Search(pat, txt);
     }
     
