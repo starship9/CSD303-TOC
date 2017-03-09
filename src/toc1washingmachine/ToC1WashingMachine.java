@@ -11,19 +11,18 @@ import java.util.Scanner;
  *
  * @author starship9
  */
-
 public class ToC1WashingMachine {
 
     /**
      * @param args the command line arguments
      */
-    public static class WashingMachine{
-        
+    public static class WashingMachine {
+
         int fabricType;
         int waterTemp;
         int machineRPM;
-        int stateTime [] = new int[4];
-        String currState [] = {"Pre-wash","Wash","Rinse","Spin"};
+        int stateTime[] = new int[4];
+        String currState[] = {"Pre-wash", "Wash", "Rinse", "Spin"};
         boolean startStatus;
 //        public WashingMachine(){
 //            fabricType = 1;
@@ -34,35 +33,40 @@ public class ToC1WashingMachine {
 //            stateTime[2] = 14;
 //            stateTime[3] = 4;
 //        }
-        
-        
+
     }
-    
-    public static void setParams(WashingMachine wm){
-        switch(wm.fabricType){
-            case 1:{
-                   wm.waterTemp = 20;
-                   wm.machineRPM = 800;
-                   wm.stateTime[0] = 10;
-                   wm.stateTime[1] = 18;
-                   wm.stateTime[2] = 14;
-                   wm.stateTime[3] = 4;
+
+    public static void setParams(WashingMachine wm) {
+        switch (wm.fabricType) {
+            case 1: {
+                wm.waterTemp = 20;
+                wm.machineRPM = 800;
+                wm.stateTime[0] = 10;
+                wm.stateTime[1] = 18;
+                wm.stateTime[2] = 14;
+                wm.stateTime[3] = 4;
             }
-                
+
             case 2: {
-                
+                wm.waterTemp = 20;
+                wm.machineRPM = 800;
+                wm.stateTime[0] = 10;
+                wm.stateTime[1] = 16;
+                wm.stateTime[2] = 18;
+                wm.stateTime[3] = 4;
             }
-                
+
             case 3: {
-                
-            }
-                
-            case 4: {
-                
+                wm.waterTemp = 20;
+                wm.machineRPM = 400;
+                wm.stateTime[0] = 10;
+                wm.stateTime[1] = 14;
+                wm.stateTime[2] = 18;
+                wm.stateTime[3] = 4;
             }
         }
     }
-    
+
     public static void main(String[] args) {
         // TODO code application logic here
         WashingMachine wm = new WashingMachine();
@@ -71,12 +75,9 @@ public class ToC1WashingMachine {
         Scanner sc = new Scanner(System.in);
         clothType = sc.nextInt();
         wm.fabricType = clothType;
-        
-        setParams(wm);
-        
-        
-    }
-    
-    
-}
 
+        setParams(wm);
+
+    }
+
+}
