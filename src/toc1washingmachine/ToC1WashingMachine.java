@@ -33,7 +33,14 @@ public class ToC1WashingMachine {
 //            stateTime[2] = 14;
 //            stateTime[3] = 4;
 //        }
-
+        public void printParams(){
+            System.out.println("Fabric type: "+this.fabricType);
+            System.out.println("Water temperature: "+this.waterTemp);
+            System.out.println("Washing machine RPM: "+this.machineRPM);
+            for (int i = 0; i < 4; i++) {
+                System.out.println("Time for "+currState[i]+" is "+stateTime[i]);
+            }
+        }
     }
 
     public static void setParams(WashingMachine wm) {
@@ -77,6 +84,7 @@ public class ToC1WashingMachine {
         wm.fabricType = clothType;
 
         setParams(wm);
+        wm.printParams();
 
     }
 
