@@ -5,6 +5,8 @@
  */
 package toc1washingmachine;
 
+import java.util.Scanner;
+
 /**
  *
  * @author starship9
@@ -32,15 +34,38 @@ public class ToC1WashingMachine {
 //            stateTime[2] = 14;
 //            stateTime[3] = 4;
 //        }
-
+        
         
     }
     
-    
+    public void setParams(WashingMachine wm){
+        switch(wm.fabricType){
+            case 1:{
+                
+            }
+                
+            case 2: {
+                
+            }
+                
+            case 3: {
+                
+            }
+                
+            case 4: {
+                
+            }
+        }
+    }
     
     public static void main(String[] args) {
         // TODO code application logic here
         WashingMachine wm = new WashingMachine();
+        System.out.println("Enter the type of fabric being washed");
+        int clothType;
+        Scanner sc = new Scanner(System.in);
+        clothType = sc.nextInt();
+        
         
         
     }
