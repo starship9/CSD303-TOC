@@ -14,3 +14,5 @@ Contains coursework for the Theory Of Computation course offered at Shiv Nadar U
 ### Remaining modules:
 - Module 2: Implementing Thompson's algorithm for constructing a NFA
   
+### Gist:
+- [Gist containing the codes of the completed problems](https://gist.github.com/starship9/c4b6a5d499670d724a9f2aa7c7b6f105)
