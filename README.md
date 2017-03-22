@@ -8,8 +8,8 @@ Contains coursework for the Theory Of Computation course offered at Shiv Nadar U
 - Nishank Saini [Github](https://github.com/starship9)
 
 ### Modules completed:
-- Module 1: Substring matching
-- Module 3: Simulating a Washing Machine
+- Module 1: [Substring matching](https://github.com/starship9/CSD303-TOC/tree/master/regex)
+- Module 3: [Simulating a Washing Machine](https://github.com/starship9/CSD303-TOC/tree/master/src/toc1washingmachine)
 
 ### Remaining modules:
 - Module 2: Implementing Thompson's algorithm for constructing a NFA
