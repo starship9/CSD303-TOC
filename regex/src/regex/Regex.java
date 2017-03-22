@@ -79,8 +79,8 @@ public void Search(String pat, String txt)
      */
     public static void main(String[] args) {
         Regex rex = new Regex();
-        String txt = "GEEKS FOR GEEKS";
-        String pat = "GEE";
+        String txt = "HELLO WORLD";
+        String pat = "HELL";
         rex.Search(pat, txt);
     }
     
